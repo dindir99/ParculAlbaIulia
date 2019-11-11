@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Parcul de aventura Dr. "Ioan Vlad" Alba Iulia</title>
+		<link rel="stylesheet" href="css/homepage.css">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="shortcut icon" type="image/png" href="favicon/favicon.png"/>
+	</head>
+	<body class="bg">
+		<div class="logo">
+			<img src="imagini/adventure_park.jpg" alt="Adventure_park" class="logo-img">
+		</div>
+		<div id="navbar" class="navbarMain">
+		  <a href="homepage.html">Acasa</a>
+		  <a href="descriere.html">Descriere si intrebari frecvente</a>
+		  <div id="dropdown">
+		    <button id="dropbtn">Despre Noi
+		      <i class="fa fa-caret-down"></i>
+		    </button>
+		    <div id="dropdown-content">
+		      <a href="preturi.html">Preturi</a>
+		      <a href="obiective.html">Imagini</a>
+		      <a href="harta_parcului.html">Harta parc</a>
+		  	</div>
+		  </div>
+		  <a href="contact.html">Contact</a> 
+		  <div class="mediaQuery">
+		  	<a href="javascript:void(0);" class="icon" onclick="buttonDropDown()">&#9776;</a>
+		  </div>
+		</div>
+		<div class="icon-bar">
+		  <a href="https://www.facebook.com" class="facebook"><i class="fa fa-facebook"></i></a> 
+		  <a href="https://www.twitter.com" class="twitter"><i class="fa fa-twitter"></i></a> 
+		</div>
+		<div class="content">
+			<h1 class="news">Noutati</h1>
+				<table>
+					<tr>
+						<th>Data</th>
+						<th>Stire</th>
+					</tr>
+					<tr>
+						<td><h3 class="date">10 octombrie 2019</h3></td>
+						<td><p class="p_news">S-a construit un topogan cu inaltimea de 10 metri si distanta de 80 de metri destinat copiilor.</p></td>
+					</tr>
+					<tr>
+						<td><h3 class="date">29 septembrie 2019</h3></td>
+						<td><p class="p_news">Incepand de astazi, 29 septembrie 2019, tarifele pentru copii sub 12 au fost reduse, din pretul integral, de la 50% la 25%.</p></td>
+					</tr>
+					<tr>
+						<td><h3 class="date">26 septembrie 2019</h3></td>
+						<td><p class="p_news">Parcul se va deschide de la ora 12:00 deoarece se va face curatenie in incinta parcului.</p></td>
+					</tr>
+					<tr>
+						<td><h3 class="date">17 septembrie 2019</h3></td>
+						<td><p class="p_news">S-a deschis Parkour "Ion Vlad", traseul fiind alcatuit din mai multe poduri din lemn, suspendate in aer si portiuni din lemn. La sol va exista o trambulina pentru a preveni eventualele accidente.</p></td>
+					</tr>
+					<tr>
+						<td><h3 class="date">16 august 2019</h3></td>
+						<td><p class="p_news">Au fost reparate structurile din lemn a mai multor poduri suspendate.</p></td>
+					</tr>
+					<tr>
+						<td><h3 class="date">12 august 2019</h3></td>
+						<td><p class="p_news">Primaria Alba-Iulia va pune la dispozitie transport gratuit in perioada sarbatorilor Sfintei Maria(15-16 august) pana la parc.</p></td>
+					</tr>
+					<tr>
+						<td><h3 class="date">8 august 2019</h3></td>
+						<td><p class="p_news">De astazi, 8 august 2019, accesul in parc este restrictionat persoanelor cu dizabilitati</p></td>
+					</tr>
+					<tr>
+						<td><h3 class="date">3 august 2019</h3></td>
+						<td><p class="p_news">Intre orele 10:00-14:00 s-a facut curatenie in parc.</p></td>
+					</tr>
+				</table>
+		</div>
+		<script>
+			window.onscroll = function() {stickyBar()};
+			var navbar = document.getElementById("navbar");
+			var sticky = navbar.offsetTop;
+			var mq = window.matchMedia("(min-width: 769px)")
+			function stickyBar() {
+				if(mq.matches){
+		  			if (window.pageYOffset >= sticky) {
+		    			navbar.classList.add("sticky")
+		    			document.getElementById("dropdown-content").style.position="fixed";
+
+		    		}
+		  		    else {
+		    			navbar.classList.remove("sticky");
+		    			document.getElementById("dropdown-content").style.position="absolute";
+		  			}
+		  		}
+			}
+			function buttonDropDown() {
+			    var x = document.getElementById("navbar");
+			  		if (x.id === "navbar") {
+			    		x.className += " responsive";
+			  		} else {
+			    		x.id = "navbar";
+			  		}
+			}
+		</script>
+	</body>
+</html>
