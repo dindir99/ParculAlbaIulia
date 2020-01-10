@@ -27,7 +27,7 @@
 		  </div>
 		  <a href="contact.html">Contact</a> 
 		  <div class="mediaQuery">
-		  	<a href="javascript:void(0);" class="icon" onclick="buttonDropDown()">&#9776;</a>
+		  	
 		  </div>
 		</div>
 		<div class="content">
@@ -92,32 +92,7 @@
 				</tr>
 			</table>
 		</div>
-		<script>
-			window.onscroll = function() {stickyBar()};
-			var navbar = document.getElementById("navbar");
-			var sticky = navbar.offsetTop;
-			var mq = window.matchMedia("(min-width: 769px)")
-			function stickyBar() {
-				if(mq.matches){
-		  			if (window.pageYOffset >= sticky) {
-		    			navbar.classList.add("sticky")
-		    			document.getElementById("dropdown-content").style.position="fixed";
-
-		    		}
-		  		    else {
-		    			navbar.classList.remove("sticky");
-		    			document.getElementById("dropdown-content").style.position="absolute";
-		  			}
-		  		}
-			}
-			function buttonDropDown() {
-			    var x = document.getElementById("navbar");
-			  		if (x.id === "navbar") {
-			    		x.className += " responsive";
-			  		} else {
-			    		x.id = "navbar";
-			  		}
-			}
-		</script>
+		<!-- Adaugare fisier js -->
+		<script type="text/javascript" src="js/preturi.js"></script>
 	</body>
 </html>

@@ -27,7 +27,7 @@
 		  </div>
 		  <a href="contact.html">Contact</a> 
 		  <div class="mediaQuery">
-		  	<a href="javascript:void(0);" class="icon" onclick="buttonDropDown()">&#9776;</a>
+		  	
 		  </div>
 		</div>
 		<div class="content">
@@ -47,32 +47,83 @@
 			  <div>Iulia</div>
 			</div>
 		</div>
-		<script>
-			window.onscroll = function() {stickyBar()};
-			var navbar = document.getElementById("navbar");
-			var sticky = navbar.offsetTop;
-			var mq = window.matchMedia("(min-width: 769px)")
-			function stickyBar() {
-				if(mq.matches){
-		  			if (window.pageYOffset >= sticky) {
-		    			navbar.classList.add("sticky")
-		    			document.getElementById("dropdown-content").style.position="fixed";
+		<!-- Formular -->
+		<div class="formularContact">
+			<h4><p class ="white">Contacteaza-ne</p></h4>
+			
+			<p id="cronometru"></p>
+			<!-- Email -->
+			<div class="emailField">
+		        <label for="inputEmail"><span class="white">Adresa mail: </span></label>
+		        <input type="email" id="inputEmail" placeholder="Adauga email">
+	    	</div>
+	    	<!-- Parola -->
+	    	<div class="passwordField">
+        		<label for="inputParola"><span class="white">Parola: </span></label>
+        		<input type="password" id="inputParola" placeholder="Adauga parola">
+    		</div>
+    		<!-- Nume -->
+    		<div class="nameField">
+        		<label for="inputNume"><span class="white">Nume complet: </span></label>
+        		<input type="text" id="inputNume" placeholder="Adauga nume">
+    		</div>
+    		<!-- Tip caine favorit -->
+    		<div class="dogField">
+    			<p class="white">Care este cainele tau preferat?</p>
+    			<select id="raseCaine">
+				  <option value="dalmatian">Dalmatian</option>
+				  <option value="labrador">Labrador</option>
+				  <option value="pashubian">Pashubian</option>
+				  <option value="ciobanesc">Ciobanesc german</option>
+				</select>
+			<!-- Varsta - checkbox -->
+    		</div>
+    		<div class="ageField">
+    			<input type="checkbox" name="varsta" value="varsta"><span class="white">Am peste 18 ani</span><br>
+    		</div>
+    		<!-- Gen -->
+    		<div class="genderField">
+    			<p class="white">Selectati genul:</p>
+    			<input type="radio" name="gender" value="male"><span class="white">Masculin</span><br>
+  				<input type="radio" name="gender" value="female"><span class="white">Feminin</span><br>
+    		</div>
+    		<!-- Varsta - range -->
+    		<div class="varsta">
+    			<p class="white">Alegeti varsta:</p>
+    			<input type="range" id="ageInput" name="varsta" min="0" max="120" onchange="arataVarsta(this.value)">
+    			<div id="showRange">
 
-		    		}
-		  		    else {
-		    			navbar.classList.remove("sticky");
-		    			document.getElementById("dropdown-content").style.position="absolute";
-		  			}
-		  		}
-			}
-			function buttonDropDown() {
-			    var x = document.getElementById("navbar");
-			  		if (x.id === "navbar") {
-			    		x.className += " responsive";
-			  		} else {
-			    		x.id = "navbar";
-			  		}
-			}
-		</script>
+    			</div>
+    		</div>
+    		<!-- Buton submit -->
+    		<button type="button" id="butonSubmit">Submit</button>
+	    </div>
+	    <div class="setari">
+		<p>Culoare pagina</p>
+		<div>
+			<select id="culoarePag">
+				  <option value="turquoise">Turquoise</option>
+				  <option value="white">Alb</option>
+				  <option value="black">Negru</option>
+			</select>
+		</div>
+		<p>Font pagina</p>
+		<div>
+			<select id="marimePag">
+				  <option value="h2">Mare</option>
+				  <option value="h4">Mijlociu</option>
+				  <option value="h6">Mic</option>
+			</select>
+		</div>
+		<div id="insertCaine">
+			<p>Alege alta rasa de catel</p>
+			<label for="inputCaine"><span>Caine: </span></label>
+        	<input type="text" id="inputCaine" placeholder="Adauga caine">
+        	<button type="button" id="butonCaine">Adauga</button>
+		</div>
+	</div>
+	    <!-- Adaugare fisier js -->
+		<script type="text/javascript" src="js/contact.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 	</body>
 </html>
