@@ -1,7 +1,6 @@
 .bg {
   font-family: tahoma;
   background-color:#f2f2f2;
-  background-image:url('/imagini/background.jpg');
   background-repeat:no-repeat;
   background-size:100vw 100%;
 }
@@ -201,4 +200,24 @@
   text-align: center;
   line-height: 75px;
   font-size: 30px;
+}
+
+.formularContact{
+  background-color:green;
+  font-family:verdana;
+  font-size:14;
+  margin:5px;
+  width:50vw;
+}
+
+.white{
+  color:white;
+}
+
+#ageInput{
+  width:100%;
+}
+#butonSubmit{
+  margin:auto;
+  display:block;
 }
